@@ -24,4 +24,6 @@ function onImgClick(event) {
   }
 }
 
+gallery.addEventListener("click", onImgClick);
+
 console.log(galleryItems);
