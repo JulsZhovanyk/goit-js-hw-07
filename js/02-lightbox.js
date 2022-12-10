@@ -6,7 +6,7 @@ const createGallery = (items) => {
   const createGalleryEl = items
     .map(
       ({ original, preview, description }) =>
-        `<a class="gallery__link" href="${original}"><img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"></a>`
+        `<a class="gallery__item" href="${original}"><img class="gallery__image" src="${preview}" alt="${description}"></a>`
     )
     .join("");
 
