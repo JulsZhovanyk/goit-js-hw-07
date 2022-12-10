@@ -10,7 +10,7 @@ const createGallery = (items) => {
     )
     .join("");
 
-  gallery.insertAdjacentHTML("afterbegin", createGalleryEl);
+  gallery.innerHTML = createGalleryEl;
 };
 
 createGallery(galleryItems);
