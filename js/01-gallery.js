@@ -4,12 +4,10 @@ const gallery = document.querySelector(".gallery");
 
 const createGallery = (items) => {
   const createGalleryEl = items
-    .reduce((array, { original, preview, description }) => {
-      array.push(
+    .map(
+      ({ original, preview, description }) =>
         `<div class="gallery__item><a class="gallery__link" href="${original}"><img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}"></a></div>`
-      );
-      return array;
-    }, [])
+    )
     .join("");
 
   gallery.insertAdjacentHTML("afterbegin", createGalleryEl);
